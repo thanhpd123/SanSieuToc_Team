@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#006019">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="0dp"
+        android:gravity="center_horizontal">
+
+        <!-- Logo nằm riêng -->
+        <ImageView
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_marginTop="32dp"
+            android:src="@drawable/logo_sansieutoc"
+            android:contentDescription="Logo" />
+
+        <!-- Khối trắng chứa form -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:background="@android:color/white"
+            android:layout_marginTop="16dp"
+            android:layout_marginHorizontal="16dp"
+            android:elevation="4dp"
+            android:backgroundTint="@android:color/white"
+            android:clipToPadding="false"
+            android:gravity="center_horizontal"
+            android:layout_marginBottom="24dp">
+
+            <!-- Tiêu đề -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Đăng ký"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp"
+                android:textColor="#000000" />
+
+            <!-- Các ô nhập liệu -->
+            <EditText
+                android:id="@+id/edtFullName"
+                android:hint="Họ và tên"
+                style="@style/EditTextStyle" />
+
+            <EditText
+                android:id="@+id/edtBirthdate"
+                android:hint="Ngày tháng năm sinh"
+                style="@style/EditTextStyle" />
+
+            <EditText
+                android:id="@+id/edtGender"
+                android:hint="Giới tính"
+                style="@style/EditTextStyle" />
+
+            <EditText
+                android:id="@+id/edtAddress"
+                android:hint="Địa chỉ"
+                style="@style/EditTextStyle" />
+
+            <EditText
+                android:id="@+id/edtPhone"
+                android:hint="Số điện thoại"
+                android:inputType="phone"
+                style="@style/EditTextStyle" />
+
+            <EditText
+                android:id="@+id/edtPassword"
+                android:hint="Mật khẩu"
+                android:inputType="textPassword"
+                style="@style/EditTextStyle" />
+
+            <EditText
+                android:id="@+id/edtConfirmPassword"
+                android:hint="Nhập lại mật khẩu"
+                android:inputType="textPassword"
+                style="@style/EditTextStyle" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="* Vui lòng cung cấp thông tin chính xác để đảm bảo tính minh bạch"
+                android:textColor="#FF0000"
+                android:textSize="12sp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Nút đăng ký -->
+            <Button
+                android:id="@+id/btnRegister"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Đăng ký"
+                android:backgroundTint="#006019"
+                android:textColor="@android:color/white"
+                android:padding="12dp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
+

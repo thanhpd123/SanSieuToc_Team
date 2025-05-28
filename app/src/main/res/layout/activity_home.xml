@@ -182,191 +182,136 @@
                         android:background="@drawable/bg_card_large_white"
                         android:paddingVertical="9dp"
                         android:orientation="vertical">
-                        <LinearLayout
-                            android:id="@+id/rzha0xpasvgd"
+                        <HorizontalScrollView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:gravity="center_vertical"
-                            android:layout_marginBottom="17dp"
-                            android:layout_marginHorizontal="15dp"
-                            android:orientation="horizontal">
+                            android:fillViewport="true"
+                            android:scrollbars="none">
+
                             <LinearLayout
-                                android:id="@+id/rl8pfwn04ba"
+                                android:id="@+id/rzha0xpasvgd"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginEnd="11dp"
-                                android:orientation="vertical">
-                                <ImageView
-                                    android:id="@+id/rhgx5nqufg5v"
-                                    android:layout_width="41dp"
-                                    android:layout_height="52dp"
-                                    android:layout_marginBottom="9dp"
-                                    android:layout_marginHorizontal="3dp"
-                                    android:src="@drawable/gr_2"
-                                    android:scaleType="fitXY"
-                                    />
-                                <TextView
-                                    android:id="@+id/rlyu7vvhjvap"
-                                    android:textColor="#000000"
-                                    android:textSize="10sp"
-                                    android:textStyle="bold"
-                                    android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:layout_marginBottom="17dp"
+                                android:layout_marginHorizontal="15dp"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:id="@+id/rl8pfwn04ba"
                                     android:layout_width="wrap_content"
-                                    android:text="Bóng đá"
-                                    />
-                            </LinearLayout>
-                            <LinearLayout
-                                android:id="@+id/r6e8xbjbgeze"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginEnd="16dp"
-                                android:orientation="vertical">
-                                <ImageView
-                                    android:id="@+id/rlwxafdb52it"
-                                    android:layout_width="40dp"
-                                    android:layout_height="52dp"
-                                    android:layout_marginBottom="9dp"
-                                    android:layout_marginHorizontal="3dp"
-                                    android:src="@drawable/gr_3"
-                                    android:scaleType="fitXY"
-                                    />
-                                <TextView
-                                    android:id="@+id/rjn6ey7gsp2s"
-                                    android:textColor="#000000"
-                                    android:textSize="10sp"
-                                    android:textStyle="bold"
                                     android:layout_height="wrap_content"
+                                    android:layout_marginEnd="11dp"
+                                    android:orientation="vertical">
+                                    <ImageView
+                                        android:id="@+id/rhgx5nqufg5v"
+                                        android:layout_width="41dp"
+                                        android:layout_height="82dp"
+                                        android:layout_marginBottom="9dp"
+                                        android:layout_marginHorizontal="3dp"
+                                        android:src="@drawable/gr_2"
+                                        android:scaleType="fitXY" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/r6e8xbjbgeze"
                                     android:layout_width="wrap_content"
-                                    android:text="Bóng rổ"
-                                    />
-                            </LinearLayout>
-                            <LinearLayout
-                                android:id="@+id/r8ko3tqi1cck"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:gravity="center_horizontal"
-                                android:layout_marginEnd="11dp"
-                                android:orientation="vertical">
-                                <ImageView
-                                    android:id="@+id/r97649tl9gl"
-                                    android:layout_width="40dp"
-                                    android:layout_height="52dp"
-                                    android:layout_marginBottom="9dp"
-                                    android:src="@drawable/gr_4"
-                                    android:scaleType="fitXY"
-                                    />
-                                <TextView
-                                    android:id="@+id/rc56qvsyr25"
-                                    android:textColor="#000000"
-                                    android:textSize="10sp"
-                                    android:textStyle="bold"
                                     android:layout_height="wrap_content"
+                                    android:layout_marginEnd="11dp"
+                                    android:orientation="vertical">
+                                    <ImageView
+                                        android:id="@+id/rlwxafdb52it"
+                                        android:layout_width="41dp"
+                                        android:layout_height="82dp"
+                                        android:layout_marginBottom="9dp"
+                                        android:layout_marginHorizontal="3dp"
+                                        android:src="@drawable/gr_3"
+                                        android:scaleType="fitXY" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/r8ko3tqi1cck"
                                     android:layout_width="wrap_content"
-                                    android:text="Tennis"
-                                    />
-                            </LinearLayout>
-                            <LinearLayout
-                                android:id="@+id/rhn6xtku1w6"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginEnd="6dp"
-                                android:orientation="vertical">
-                                <ImageView
-                                    android:id="@+id/r0sfmufn8607"
-                                    android:layout_width="36dp"
-                                    android:layout_height="48dp"
-                                    android:layout_marginBottom="9dp"
-                                    android:layout_marginHorizontal="10dp"
-                                    android:src="@drawable/gr_5"
-                                    android:scaleType="fitXY"
-                                    />
-                                <TextView
-                                    android:id="@+id/rczequrjb1hi"
-                                    android:textColor="#000000"
-                                    android:textSize="10sp"
-                                    android:textStyle="bold"
                                     android:layout_height="wrap_content"
+                                    android:layout_marginEnd="11dp"
+                                    android:orientation="vertical">
+                                    <ImageView
+                                        android:id="@+id/r97649tl9gl"
+                                        android:layout_width="41dp"
+                                        android:layout_height="82dp"
+                                        android:layout_marginBottom="9dp"
+                                        android:layout_marginHorizontal="3dp"
+                                        android:src="@drawable/gr_4"
+                                        android:scaleType="fitXY" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/rhn6xtku1w6"
                                     android:layout_width="wrap_content"
-                                    android:text="Pickleball"
-                                    />
-                            </LinearLayout>
-                            <LinearLayout
-                                android:id="@+id/r436fccfd8nq"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginEnd="1dp"
-                                android:orientation="vertical">
-                                <ImageView
-                                    android:id="@+id/r2wd713e6bhd"
-                                    android:layout_width="40dp"
-                                    android:layout_height="52dp"
-                                    android:layout_marginBottom="9dp"
-                                    android:layout_marginHorizontal="6dp"
-                                    android:src="@drawable/gr_6"
-                                    android:scaleType="fitXY"
-                                    />
-                                <TextView
-                                    android:id="@+id/r4kmwoomb57f"
-                                    android:textColor="#000000"
-                                    android:textSize="10sp"
-                                    android:textStyle="bold"
                                     android:layout_height="wrap_content"
+                                    android:layout_marginEnd="11dp"
+                                    android:orientation="vertical">
+                                    <ImageView
+                                        android:id="@+id/r0sfmufn8607"
+                                        android:layout_width="41dp"
+                                        android:layout_height="82dp"
+                                        android:layout_marginBottom="9dp"
+                                        android:layout_marginHorizontal="10dp"
+                                        android:src="@drawable/gr_5"
+                                        android:scaleType="fitXY" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/r436fccfd8nq"
                                     android:layout_width="wrap_content"
-                                    android:text="Cầu lông"
-                                    />
-                            </LinearLayout>
-                            <LinearLayout
-                                android:id="@+id/rt80yj6pbt6c"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:gravity="center_horizontal"
-                                android:layout_marginEnd="10dp"
-                                android:orientation="vertical">
-                                <ImageView
-                                    android:id="@+id/rvq55wr5hm7"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="52dp"
-                                    android:layout_marginBottom="9dp"
-                                    android:layout_marginHorizontal="12dp"
-                                    android:src="@drawable/gr_7"
-                                    android:scaleType="fitXY"
-                                    />
-                                <TextView
-                                    android:id="@+id/rjgb4l76bmb"
-                                    android:textColor="#000000"
-                                    android:textSize="10sp"
-                                    android:textStyle="bold"
                                     android:layout_height="wrap_content"
+                                    android:layout_marginEnd="11dp"
+                                    android:orientation="vertical">
+                                    <ImageView
+                                        android:id="@+id/r2wd713e6bhd"
+                                        android:layout_width="41dp"
+                                        android:layout_height="82dp"
+                                        android:layout_marginBottom="9dp"
+                                        android:layout_marginHorizontal="6dp"
+                                        android:src="@drawable/gr_6"
+                                        android:scaleType="fitXY" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/rt80yj6pbt6c"
                                     android:layout_width="wrap_content"
-                                    android:text="Bóng chuyền"
-                                    />
-                            </LinearLayout>
-                            <LinearLayout
-                                android:id="@+id/ru7qmxv2ijg8"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:gravity="center_horizontal"
-                                android:orientation="vertical">
-                                <ImageView
-                                    android:id="@+id/ruq6xkyxp5pk"
-                                    android:layout_width="41dp"
-                                    android:layout_height="52dp"
-                                    android:layout_marginBottom="9dp"
-                                    android:src="@drawable/gr_8"
-                                    android:scaleType="fitXY"
-                                    />
-                                <TextView
-                                    android:id="@+id/r2iatccuflu5"
-                                    android:textColor="#000000"
-                                    android:textSize="10sp"
-                                    android:textStyle="bold"
                                     android:layout_height="wrap_content"
+                                    android:layout_marginEnd="11dp"
+                                    android:gravity="center_horizontal"
+                                    android:orientation="vertical">
+                                    <ImageView
+                                        android:id="@+id/rvq55wr5hm7"
+                                        android:layout_width="50dp"
+                                        android:layout_height="82dp"
+                                        android:layout_marginBottom="9dp"
+                                        android:layout_marginHorizontal="12dp"
+                                        android:src="@drawable/gr_7"
+                                        android:scaleType="fitXY" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/ru7qmxv2ijg8"
                                     android:layout_width="wrap_content"
-                                    android:text="Khác"
-                                    />
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_horizontal"
+                                    android:orientation="vertical">
+                                    <ImageView
+                                        android:id="@+id/ruq6xkyxp5pk"
+                                        android:layout_width="41dp"
+                                        android:layout_height="82dp"
+                                        android:layout_marginBottom="9dp"
+                                        android:src="@drawable/gr_8"
+                                        android:scaleType="fitXY" />
+                                </LinearLayout>
+
                             </LinearLayout>
-                        </LinearLayout>
+                        </HorizontalScrollView>
+
                         <LinearLayout
                             android:id="@+id/rawigyoiw7td"
                             android:layout_width="match_parent"
@@ -1057,165 +1002,35 @@
                                         android:layout_height="wrap_content" />
                                 </LinearLayout>
 
+                                <LinearLayout
+                                    android:layout_width="285dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="12dp"
+                                    android:background="@drawable/bg_card_white"
+                                    android:elevation="4dp"
+                                    android:orientation="vertical"
+                                    android:paddingBottom="21dp">
+
+                                    <com.google.android.material.imageview.ShapeableImageView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="184dp"
+                                        android:layout_marginBottom="8dp"
+                                        android:src="@drawable/b2"
+                                        android:scaleType="fitXY" />
+
+                                    <TextView
+                                        android:text="Hướng dẫn đặt sân chỉ với 3 bước đơn giản"
+                                        android:textColor="#000000"
+                                        android:textSize="15sp"
+                                        android:layout_marginStart="16dp"
+                                        android:layout_width="236dp"
+                                        android:layout_height="wrap_content" />
+                                </LinearLayout>
                                 <!-- Có thể thêm tiếp bài viết 3, 4, ... -->
 
                             </LinearLayout>
                         </HorizontalScrollView>
 
-<!--                        <LinearLayout
-                            android:id="@+id/rvhc4rjhtgrq"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center_vertical"
-                            android:background="@drawable/bg_bottom_nav_white_rounded"
-                            android:paddingVertical="14dp"
-                            android:paddingLeft="25dp"
-                            android:elevation="4dp"
-                            android:orientation="horizontal">
-                            <LinearLayout
-                                android:id="@+id/r6zscicknmkn"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:gravity="center_horizontal"
-                                android:layout_marginEnd="20dp"
-                                android:orientation="vertical">
-                                <ImageView
-                                    android:id="@+id/racj039r26g9"
-                                    android:layout_width="30dp"
-                                    android:layout_height="26dp"
-                                    android:layout_marginBottom="6dp"
-                                    android:src="@drawable/a1"
-                                    android:scaleType="fitXY"
-                                    />
-                                <TextView
-                                    android:id="@+id/rtjhrdeuke2"
-                                    android:textColor="#000000"
-                                    android:textSize="12sp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_width="wrap_content"
-                                    android:text="Trang chủ"
-                                    />
-                            </LinearLayout>
-                            <LinearLayout
-                                android:id="@+id/r2hjao4ksru4"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:gravity="center_horizontal"
-                                android:layout_marginEnd="22dp"
-                                android:orientation="vertical">
-                                <ImageView
-                                    android:id="@+id/rthim0mk8me"
-                                    android:layout_width="22dp"
-                                    android:layout_height="25dp"
-                                    android:layout_marginBottom="6dp"
-                                    android:src="@drawable/a2"
-                                    android:scaleType="fitXY"
-                                    />
-                                <TextView
-                                    android:id="@+id/rnysy0fd85zj"
-                                    android:textColor="#000000"
-                                    android:textSize="12sp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_width="wrap_content"
-                                    android:text="Đặt sân"
-                                    />
-                            </LinearLayout>
-                            <LinearLayout
-                                android:id="@+id/rhhx86k4k3w"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:gravity="center_horizontal"
-                                android:layout_marginEnd="20dp"
-                                android:orientation="vertical">
-                                <ImageView
-                                    android:id="@+id/raxvwikk4fv5"
-                                    android:layout_width="28dp"
-                                    android:layout_height="24dp"
-                                    android:layout_marginBottom="7dp"
-                                    android:src="@drawable/a3"
-                                    android:scaleType="fitXY"
-                                    />
-                                <TextView
-                                    android:id="@+id/rauyaaqkf8bi"
-                                    android:textColor="#000000"
-                                    android:textSize="12sp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_width="wrap_content"
-                                    android:text="HLV"
-                                    />
-                            </LinearLayout>
-                            <LinearLayout
-                                android:id="@+id/rvs2dt5fs8gd"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:gravity="center_horizontal"
-                                android:layout_marginEnd="20dp"
-                                android:orientation="vertical">
-                                <ImageView
-                                    android:id="@+id/ryf16ujrpo9"
-                                    android:layout_width="30dp"
-                                    android:layout_height="25dp"
-                                    android:layout_marginBottom="7dp"
-                                    android:src="@drawable/a4"
-                                    android:scaleType="fitXY"
-                                    />
-                                <TextView
-                                    android:id="@+id/rsuzn28yl0rl"
-                                    android:textColor="#000000"
-                                    android:textSize="12sp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_width="wrap_content"
-                                    android:text="Mua sắm"
-                                    />
-                            </LinearLayout>
-                            <LinearLayout
-                                android:id="@+id/rnbo16bvqv1r"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:gravity="center_horizontal"
-                                android:layout_marginEnd="20dp"
-                                android:orientation="vertical">
-                                <ImageView
-                                    android:id="@+id/rvtbhwcbtbyn"
-                                    android:layout_width="30dp"
-                                    android:layout_height="30dp"
-                                    android:layout_marginBottom="4dp"
-                                    android:src="@drawable/a5"
-                                    android:scaleType="fitXY"
-                                    />
-                                <TextView
-                                    android:id="@+id/ri2o8igu7aaq"
-                                    android:textColor="#000000"
-                                    android:textSize="12sp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_width="wrap_content"
-                                    android:text="Thông báo"
-                                    />
-                            </LinearLayout>
-                            <LinearLayout
-                                android:id="@+id/rdflcd00qp9a"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:gravity="center_horizontal"
-                                android:orientation="vertical">
-                                <ImageView
-                                    android:id="@+id/rv1e9l9q8bw"
-                                    android:layout_width="26dp"
-                                    android:layout_height="26dp"
-                                    android:layout_marginBottom="6dp"
-                                    android:src="@drawable/a6"
-                                    android:scaleType="fitXY"
-                                    />
-                                <TextView
-                                    android:id="@+id/rdbjibzpszy"
-                                    android:textColor="#000000"
-                                    android:textSize="12sp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_width="wrap_content"
-                                    android:text="Cá nhân"
-                                    />
-                            </LinearLayout>
-                        </LinearLayout>-->
                     </LinearLayout>
                 </LinearLayout>
             </RelativeLayout>

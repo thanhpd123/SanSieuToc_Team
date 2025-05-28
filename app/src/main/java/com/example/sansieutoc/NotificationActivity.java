@@ -2,20 +2,27 @@ package com.example.sansieutoc;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class HomeActivity extends AppCompatActivity {
+public class NotificationActivity extends AppCompatActivity {
+
+    private TextView btnThongBao, btnTinNhan;
+    private LinearLayout layoutNotificationList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
+        setContentView(R.layout.activity_notifications); // Đổi theo tên file XML của bạn
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView);
+
+        bottomNavigationView.setSelectedItemId(R.id.nav_notifications);
 
         bottomNavigationView.setOnItemSelectedListener(item -> {
             int id = item.getItemId();

@@ -23,6 +23,11 @@
         <activity android:name=".LoginActivity" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".HomeActivity" />
+        <activity android:name=".ProfileActivity" />
+        <activity android:name=".BookingActivity" />
+        <activity android:name=".StadiumDetailActivity" />
+        <activity android:name=".BookingOrderActivity"/>
+        <activity android:name=".NotificationActivity"/>
     </application>
 
 </manifest>

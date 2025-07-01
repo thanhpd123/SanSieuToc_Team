@@ -21,7 +21,6 @@ public class NotificationActivity extends AppCompatActivity {
         setContentView(R.layout.activity_notifications); // Đổi theo tên file XML của bạn
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView);
-
         bottomNavigationView.setSelectedItemId(R.id.nav_notifications);
 
         bottomNavigationView.setOnItemSelectedListener(item -> {

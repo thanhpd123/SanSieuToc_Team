@@ -37,7 +37,7 @@ public class LoginActivity extends AppCompatActivity {
                     return;
                 }
 
-                if (phone.equals("0336677789") && password.equals("1")) {
+                if (phone.equals("0336677789") && password.equals("2")) {
                     Toast.makeText(LoginActivity.this, "Đăng nhập thành công", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
                     startActivity(intent);

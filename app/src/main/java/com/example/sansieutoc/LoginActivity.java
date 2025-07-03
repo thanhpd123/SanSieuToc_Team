@@ -11,6 +11,12 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.sansieutoc.DataHelper.AppDatabase;
+import com.example.sansieutoc.DataHelper.DataSample;
+import com.example.sansieutoc.Entity.User;
+
+import java.util.concurrent.Executors;
+
 public class LoginActivity extends AppCompatActivity {
 
     EditText edtPhone, edtPassword;
@@ -20,6 +26,12 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        // Khởi tạo database (singleton)
+        AppDatabase db = AppDatabase.getInstance(this);
+
+        // Insert dữ liệu mẫu (chỉ nên gọi khi lần đầu chạy app hoặc debug, gọi nhiều lần sẽ có dữ liệu trùng)
+        DataSample.insertSampleData(db);
 
         edtPhone = findViewById(R.id.edtPhone);
         edtPassword = findViewById(R.id.edtPassword);
@@ -37,14 +49,20 @@ public class LoginActivity extends AppCompatActivity {
                     return;
                 }
 
-                if (phone.equals("0336677789") && password.equals("2")) {
-                    Toast.makeText(LoginActivity.this, "Đăng nhập thành công", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
-                    startActivity(intent);
-                    finish();
-                } else {
-                    Toast.makeText(LoginActivity.this, "Sai số điện thoại hoặc mật khẩu", Toast.LENGTH_SHORT).show();
-                }
+                // Kiểm tra đăng nhập bằng Room DB (không hardcode nữa)
+                Executors.newSingleThreadExecutor().execute(() -> {
+                    User user = db.userDao().findByPhoneAndPassword(phone, password);
+                    runOnUiThread(() -> {
+                        if (user != null) {
+                            Toast.makeText(LoginActivity.this, "Đăng nhập thành công", Toast.LENGTH_SHORT).show();
+                            Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+                            startActivity(intent);
+                            finish();
+                        } else {
+                            Toast.makeText(LoginActivity.this, "Sai số điện thoại hoặc mật khẩu", Toast.LENGTH_SHORT).show();
+                        }
+                    });
+                });
             }
         });
 

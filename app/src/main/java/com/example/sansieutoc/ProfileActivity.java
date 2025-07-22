@@ -2,6 +2,8 @@ package com.example.sansieutoc;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,11 +11,33 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class ProfileActivity extends AppCompatActivity {
+    private int userId = -1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
+        userId = getIntent().getIntExtra("user_id", -1);
+        if (userId == -1) {
+            Toast.makeText(this, "Không tìm thấy thông tin user. Vui lòng đăng nhập lại.", Toast.LENGTH_SHORT).show();
+            // Quay về LoginActivity nếu cần
+            startActivity(new Intent(this, LoginActivity.class));
+            finish();
+            return;
+        }
+        LinearLayout menuPersonalInfo = findViewById(R.id.menu_personal_info);
+        menuPersonalInfo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Xử lý chuyển trang: Start PersonalInfoActivity và truyền userId
+                Intent intent = new Intent(ProfileActivity.this, activity_personal_info.class);
+                intent.putExtra("user_id", userId);  // Truyền dữ liệu nếu cần
+                startActivity(intent);
+
+                // Tùy chọn: Thêm Toast để test
+                Toast.makeText(ProfileActivity.this, "Chuyển sang Thông tin cá nhân", Toast.LENGTH_SHORT).show();
+            }
+        });
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView);
         // Chọn đúng nút "Cá nhân"
         bottomNavigationView.setSelectedItemId(R.id.nav_profile);

@@ -67,7 +67,15 @@ public class BookingActivity extends AppCompatActivity {
             List<Field> stadiums = db.fieldDao().getAll();
             runOnUiThread(() -> {
                 StadiumAdapter adapter = new StadiumAdapter(this, stadiums, field -> {
-                    // Handle item click, e.g., open detail
+                    Intent intent = new Intent(this, StadiumDetailActivity.class);
+                    intent.putExtra("fieldId", field.remoteId);
+                    intent.putExtra("name", field.name);
+                    intent.putExtra("time", field.availableTimes);
+                    intent.putExtra("price", field.pricePerHour + "đ/giờ");
+                    intent.putExtra("address", field.address);
+                    int resId = getResources().getIdentifier(field.images, "drawable", getPackageName());
+                    intent.putExtra("imageRes", resId != 0 ? resId : R.drawable.d3); // fallback image
+                    startActivity(intent);
                 });
                 recyclerView.setAdapter(adapter);
             });

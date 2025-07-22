@@ -13,5 +13,6 @@ public interface FieldDao {
     @Delete void delete(Field field);
     @Query("SELECT * FROM fields") List<Field> getAll();
     @Query("SELECT * FROM fields WHERE id = :id") Field getById(int id);
-
+    @Query("DELETE FROM fields")
+    void deleteAllField();
 }

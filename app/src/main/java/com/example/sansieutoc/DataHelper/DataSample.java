@@ -18,6 +18,7 @@ import java.util.concurrent.Executors;
 public class DataSample {
     public static void insertSampleData(AppDatabase db) {
         Executors.newSingleThreadExecutor().execute(() -> {
+//            db.fieldDao().deleteAllField();
             if (db.userDao().getAll().size() > 0) return;
 
             // FieldType

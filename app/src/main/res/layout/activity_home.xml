@@ -382,7 +382,7 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="134dp"
                                     android:layout_marginBottom="7dp"
-                                    android:src="@drawable/b2"
+                                    android:src="@drawable/san_kim_bong"
                                     android:scaleType="fitXY"
                                     />
                                 <TextView
@@ -394,7 +394,7 @@
                                     android:layout_marginStart="5dp"
                                     android:layout_height="wrap_content"
                                     android:layout_width="wrap_content"
-                                    android:text="Sân bóng đá"
+                                    android:text="Sân cầu lông"
                                     />
                                 <TextView
                                     android:id="@+id/rs1bi3xmjcj"
@@ -405,7 +405,7 @@
                                     android:layout_marginStart="5dp"
                                     android:layout_height="wrap_content"
                                     android:layout_width="wrap_content"
-                                    android:text="Sân bóng đá KTX Đại học FPT"
+                                    android:text="Sân Cầu Lông Kim Bông"
                                     />
                                 <LinearLayout
                                     android:id="@+id/rglghfqujvtq"
@@ -430,7 +430,7 @@
                                         android:textSize="10sp"
                                         android:layout_height="wrap_content"
                                         android:layout_width="wrap_content"
-                                        android:text="Khu CNC Hoà Lạc"
+                                        android:text="Xã Tân Xã, Huyện Thạch Thất, Hà Nội"
                                         />
                                 </LinearLayout>
                                 <LinearLayout
@@ -480,7 +480,7 @@
                                     android:layout_marginStart="5dp"
                                     android:layout_height="wrap_content"
                                     android:layout_width="wrap_content"
-                                    android:text="Mở cửa: 05:00 - 22:00"
+                                    android:text="Mở cửa: 08:00 - 22:00"
                                     />
                             </LinearLayout>
                             <LinearLayout
@@ -497,7 +497,7 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="134dp"
                                     android:layout_marginBottom="7dp"
-                                    android:src="@drawable/b2"
+                                    android:src="@drawable/san_dai_duong"
                                     android:scaleType="fitXY"
                                     />
                                 <TextView
@@ -520,7 +520,7 @@
                                     android:layout_marginStart="5dp"
                                     android:layout_height="wrap_content"
                                     android:layout_width="wrap_content"
-                                    android:text="Sân bóng đá KTX Đại học FPT"
+                                    android:text="Sân cỏ nhân tạo Đại Dương"
                                     />
                                 <LinearLayout
                                     android:id="@+id/rrvxtwpsyslc"
@@ -545,7 +545,7 @@
                                         android:textSize="10sp"
                                         android:layout_height="wrap_content"
                                         android:layout_width="wrap_content"
-                                        android:text="Khu CNC Hoà Lạc"
+                                        android:text="Cổng làng thôn 2, Xã Tân Xã, Thạch Thất, Hà Nội"
                                         />
                                 </LinearLayout>
                                 <LinearLayout
@@ -669,7 +669,7 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="134dp"
                                     android:layout_marginBottom="7dp"
-                                    android:src="@drawable/b2"
+                                    android:src="@drawable/san_fpt"
                                     android:scaleType="fitXY"
                                     />
                                 <TextView
@@ -692,7 +692,7 @@
                                     android:layout_marginStart="5dp"
                                     android:layout_height="wrap_content"
                                     android:layout_width="wrap_content"
-                                    android:text="Sân bóng đá KTX Đại học FPT"
+                                    android:text="Sân bóng trường Đại học FPT Hà Nội"
                                     />
                                 <LinearLayout
                                     android:id="@+id/ry9glztrtqos"
@@ -717,7 +717,7 @@
                                         android:textSize="10sp"
                                         android:layout_height="wrap_content"
                                         android:layout_width="wrap_content"
-                                        android:text="Khu CNC Hoà Lạc"
+                                        android:text="Thạch Hoà, Thạch Thất, Hà Nội"
                                         />
                                 </LinearLayout>
                                 <LinearLayout
@@ -779,14 +779,15 @@
                                 android:paddingBottom="28dp"
                                 android:elevation="4dp"
                                 android:orientation="vertical">
+
                                 <ImageView
                                     android:id="@+id/rnvi5i6lqg0o"
                                     android:layout_width="match_parent"
                                     android:layout_height="134dp"
                                     android:layout_marginBottom="7dp"
-                                    android:src="@drawable/b2"
                                     android:scaleType="fitXY"
-                                    />
+                                    android:src="@drawable/san_bong_ro_quoc_gia" />
+
                                 <TextView
                                     android:id="@+id/rw2bfih0308"
                                     android:textColor="#000000"
@@ -796,7 +797,7 @@
                                     android:layout_marginStart="5dp"
                                     android:layout_height="wrap_content"
                                     android:layout_width="wrap_content"
-                                    android:text="Sân bóng đá"
+                                    android:text="Sân bóng rổ"
                                     />
                                 <TextView
                                     android:id="@+id/r5kkpt413pav"
@@ -807,7 +808,7 @@
                                     android:layout_marginStart="5dp"
                                     android:layout_height="wrap_content"
                                     android:layout_width="wrap_content"
-                                    android:text="Sân bóng đá KTX Đại học FPT"
+                                    android:text="Sân bóng rổ đại học Quốc gia Hoà Lạc"
                                     />
                                 <LinearLayout
                                     android:id="@+id/r5mt41fobv1"
@@ -832,7 +833,7 @@
                                         android:textSize="10sp"
                                         android:layout_height="wrap_content"
                                         android:layout_width="wrap_content"
-                                        android:text="Khu CNC Hoà Lạc"
+                                        android:text="Thạch Hoà, Thạch Thất, Hà Nội"
                                         />
                                 </LinearLayout>
                                 <LinearLayout
@@ -882,7 +883,7 @@
                                     android:layout_marginStart="5dp"
                                     android:layout_height="wrap_content"
                                     android:layout_width="wrap_content"
-                                    android:text="Mở cửa: 05:00 - 22:00"
+                                    android:text="Mở cửa: 08:00 - 22:00"
                                     />
                             </LinearLayout>
                         </LinearLayout>

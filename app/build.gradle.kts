@@ -39,6 +39,7 @@ dependencies {
     implementation(libs.constraintlayout)
     implementation(libs.room.common.jvm)
     implementation(libs.room.runtime.android)
+    implementation(libs.androidx.constraintlayout)
     annotationProcessor("androidx.room:room-compiler:2.7.2")
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)

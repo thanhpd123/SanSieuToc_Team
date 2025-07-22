@@ -15,20 +15,19 @@ import java.util.List;
 
 public class HomeActivity extends AppCompatActivity {
 
-    private AppDatabase db;
-
+    private int userId = -1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView);
-
-        // Khởi tạo database (singleton)
-        db = AppDatabase.getInstance(this);
-        // Insert dữ liệu mẫu
-        DataSample.insertSampleData(db);
-
+        userId = getIntent().getIntExtra("user_id", -1);
+        if (userId == -1) {
+            Toast.makeText(this, "Không tìm thấy user", Toast.LENGTH_SHORT).show();
+            finish();
+            return;
+        }
         bottomNavigationView.setOnItemSelectedListener(item -> {
             int id = item.getItemId();
             if (id == R.id.nav_home) {
@@ -50,6 +49,7 @@ public class HomeActivity extends AppCompatActivity {
             } else if (id == R.id.nav_profile) {
                 Toast.makeText(this, "Cá Nhân", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(this, ProfileActivity.class);
+                intent.putExtra("user_id", userId);  // Truyền userId sang personnal info activity
                 startActivity(intent);
                 return true;
             }

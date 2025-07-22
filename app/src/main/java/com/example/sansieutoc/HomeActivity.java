@@ -6,9 +6,13 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.sansieutoc.DataHelper.AppDatabase;
+import com.example.sansieutoc.DataHelper.DataSample;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class HomeActivity extends AppCompatActivity {
+
+    private AppDatabase db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,6 +20,11 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView);
+
+        // Khởi tạo database (singleton)
+        db = AppDatabase.getInstance(this);
+        // Insert dữ liệu mẫu
+        DataSample.insertSampleData(db);
 
         bottomNavigationView.setOnItemSelectedListener(item -> {
             int id = item.getItemId();

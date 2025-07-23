@@ -13,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.sansieutoc.DataHelper.AppDatabase;
 import com.example.sansieutoc.DataHelper.DataSample;
+import com.example.sansieutoc.Entity.CurrentUser;
 import com.example.sansieutoc.Entity.User;
 
 import java.util.concurrent.Executors;
@@ -27,10 +28,9 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        // Khởi tạo database (singleton)
         AppDatabase db = AppDatabase.getInstance(this);
 
-        // Insert dữ liệu mẫu (chỉ nên gọi khi lần đầu chạy app hoặc debug, gọi nhiều lần sẽ có dữ liệu trùng)
+        // Insert dữ liệu mẫu (nếu cần)
         DataSample.insertSampleData(db);
 
         edtPhone = findViewById(R.id.edtPhone);
@@ -38,11 +38,9 @@ public class LoginActivity extends AppCompatActivity {
         btnLogin = findViewById(R.id.btnLogin);
         TextView tvRegisterNow = findViewById(R.id.tvRegisterNow);
 
-        btnLogin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String phone = edtPhone.getText().toString().trim();
-                String password = edtPassword.getText().toString().trim();
+        btnLogin.setOnClickListener(view -> {
+            String phone = edtPhone.getText().toString().trim();
+            String password = edtPassword.getText().toString().trim();
 
                 if (TextUtils.isEmpty(phone) || TextUtils.isEmpty(password)) {
                     Toast.makeText(LoginActivity.this, "Vui lòng điền đầy đủ thông tin", Toast.LENGTH_SHORT).show();
@@ -71,14 +69,37 @@ public class LoginActivity extends AppCompatActivity {
                     });
                 });
             }
+
+            // Login
+            Executors.newSingleThreadExecutor().execute(() -> {
+                User user = db.userDao().findByPhoneAndPassword(phone, password);
+                runOnUiThread(() -> {
+                    if (user != null) {
+                        Toast.makeText(LoginActivity.this, "Đăng nhập thành công", Toast.LENGTH_SHORT).show();
+
+                        // ✅ Gán CurrentUser
+                        CurrentUser.user = user;
+
+                        // ✅ Lưu role vào SharedPreferences (tuỳ mục đích sử dụng)
+                        getSharedPreferences("MyPrefs", MODE_PRIVATE)
+                                .edit()
+                                .putString("role", user.role)
+                                .apply();
+
+                        Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+                        intent.putExtra("user_id", user.id);
+                        startActivity(intent);
+                        finish();
+                    } else {
+                        Toast.makeText(LoginActivity.this, "Sai số điện thoại hoặc mật khẩu", Toast.LENGTH_SHORT).show();
+                    }
+                });
+            });
         });
 
-        tvRegisterNow.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
-                startActivity(intent);
-            }
+        tvRegisterNow.setOnClickListener(v -> {
+            Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
+            startActivity(intent);
         });
     }
 }

@@ -2,6 +2,7 @@ package com.example.sansieutoc;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,12 +17,22 @@ import java.util.List;
 public class HomeActivity extends AppCompatActivity {
 
     private int userId = -1;
+    private String userRole;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
+        userRole = getSharedPreferences("MyPrefs", MODE_PRIVATE)
+                .getString("role", "user"); // default role = user
+
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView);
+        // ✅ Thay đổi menu nếu role != user
+        if (userRole.equals("FieldOwner")) {
+            MenuItem shopItem = bottomNavigationView.getMenu().findItem(R.id.nav_shop);
+            shopItem.setTitle("CRUD Sân");
+            shopItem.setIcon(R.drawable.ic_edit); // thay icon CRUD sân thực tế
+        }
         userId = getIntent().getIntExtra("user_id", -1);
         if (userId == -1) {
             Toast.makeText(this, "Không tìm thấy user", Toast.LENGTH_SHORT).show();
@@ -39,7 +50,13 @@ public class HomeActivity extends AppCompatActivity {
                 startActivity(new Intent(this, BookingActivity.class));
                 return true;
             } else if (id == R.id.nav_shop) {
-                Toast.makeText(this, "Mua sắm", Toast.LENGTH_SHORT).show();
+                if (!userRole.equals("FieldOwner")) {
+                    Toast.makeText(this, "Mua sắm", Toast.LENGTH_SHORT).show();
+                    // startActivity(new Intent(this, ShopActivity.class)); // nếu có
+                } else {
+                    Toast.makeText(this, "CRUD Sân", Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(this, CrudFieldActivity.class));
+                }
                 return true;
             } else if (id == R.id.nav_notifications) {
                 Toast.makeText(this, "Thông báo", Toast.LENGTH_SHORT).show();

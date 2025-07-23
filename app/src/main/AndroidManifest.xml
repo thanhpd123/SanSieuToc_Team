@@ -18,6 +18,15 @@
 
         </activity>
         <activity
+            android:name=".AddFieldActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UpdateFieldActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CrudFieldActivity"
+            android:exported="false" />
+        <activity
             android:name=".SplashActivity"
             android:exported="true">
             <intent-filter>

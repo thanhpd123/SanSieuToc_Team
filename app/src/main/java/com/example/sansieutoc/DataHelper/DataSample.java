@@ -42,6 +42,19 @@ public class DataSample {
             user.isBanned = false;
             db.userDao().insert(user);
 
+            // User
+            User user2 = new User();
+            user2.remoteId = "68515ce1589486f81920b587";
+            user2.name = "Phan Đanh";
+            user2.email = "plane0802@gmail.com";
+            user2.passwordHash = "2";
+            user2.role = "FieldOwner";
+            user2.phone = "0398521155";
+            user2.address = "Khối 2 thị trấn Con Cuông";
+            user2.createdAt = "2025-06-17T12:17:37.548Z";
+            user2.updatedAt = "2025-06-17T12:17:37.548Z";
+            db.userDao().insert(user2);
+
             // Field
             Field f1 = new Field();
             f1.remoteId = "68503ae64dba71d075e1849a";

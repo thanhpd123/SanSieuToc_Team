@@ -1,0 +1,71 @@
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="#e0f2f1"
+    android:padding="8dp"
+    android:layout_marginBottom="12dp"
+    android:elevation="2dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView
+        android:id="@+id/image_view_field"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/d3"
+        android:scaleType="centerCrop"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/bg_card_lightgreen"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/text_view_name"
+            android:layout_width="192dp"
+            android:layout_height="28dp"
+            android:text="Tên sân"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="#000000"
+            android:maxLines="2"
+            android:ellipsize="end"/>
+
+        <TextView
+            android:id="@+id/text_view_address"
+            android:layout_width="192dp"
+            android:layout_height="28dp"
+            android:layout_marginTop="4dp"
+            android:text="Địa chỉ"
+            android:textColor="#555555"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/text_view_price"
+            android:layout_width="192dp"
+            android:layout_height="28dp"
+            android:text="Giá/giờ"
+            android:textSize="13sp"
+            android:textColor="#333333"/>
+    </LinearLayout>
+
+    <!-- Nút Update -->
+    <ImageButton
+        android:id="@+id/btnUpdate"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_edit"
+        android:background="@android:color/transparent"
+        android:contentDescription="Update"/>
+
+    <!-- Nút Delete -->
+    <ImageButton
+        android:id="@+id/btnDelete"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_delete"
+        android:background="@android:color/transparent"
+        android:contentDescription="Delete"/>
+</LinearLayout>

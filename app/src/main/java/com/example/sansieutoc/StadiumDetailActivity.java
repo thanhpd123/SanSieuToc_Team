@@ -16,20 +16,24 @@ public class StadiumDetailActivity extends AppCompatActivity {
 
         // Lấy dữ liệu từ Intent
         Intent intent = getIntent();
+        String fieldId = intent.getStringExtra("FieldId");
         String name = intent.getStringExtra("name");
         String time = intent.getStringExtra("time");
         String price = intent.getStringExtra("price");
+        String address = intent.getStringExtra("address");
         int imageRes = intent.getIntExtra("imageRes", R.drawable.d3); // fallback ảnh
 
         // Gán dữ liệu lên UI
         TextView tvName = findViewById(R.id.tvStadiumName);
         TextView tvTime = findViewById(R.id.tvTime);
         TextView tvPrice = findViewById(R.id.tvPrice);
+        TextView tvAddress = findViewById(R.id.tvStadiumAddress);
         ImageView ivImage = findViewById(R.id.ivStadiumImage);
 
         tvName.setText(name);
         tvTime.setText("⏰ Mở cửa: " + time);
         tvPrice.setText("Chỉ từ " + price);
+        tvAddress.setText("📍 Địa chỉ: " + address);
         ivImage.setImageResource(imageRes);
 
         // Xử lý nút quay lại
@@ -40,11 +44,8 @@ public class StadiumDetailActivity extends AppCompatActivity {
         btnDatSanNgay.setOnClickListener(v -> {
             Intent intent2 = new Intent(StadiumDetailActivity.this, BookingOrderActivity.class);
 
-            // (Tùy chọn) Nếu bạn muốn truyền thêm thông tin đặt sân:
-            intent2.putExtra("selectedDate", "Hôm nay - Thứ 7");
-            intent2.putExtra("fieldType", "Sân 5x5");
-            intent2.putExtra("timeSlot", "6h00 - 8h00");
-
+            intent2.putExtra("FieldId", fieldId);
+            intent2.putExtra("totalPrice", price);
             startActivity(intent2);
         });
     }

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText android:id="@+id/edtRemoteId"
+            android:hint="Remote ID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <EditText android:id="@+id/edtName"
+            android:hint="Tên sân"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"/>
+
+        <EditText android:id="@+id/edtAddress"
+            android:hint="Địa chỉ"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"/>
+
+        <EditText android:id="@+id/edtDescription"
+            android:hint="Mô tả"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"/>
+
+        <EditText android:id="@+id/edtPrice"
+            android:hint="Giá mỗi giờ"
+            android:inputType="number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"/>
+
+        <EditText android:id="@+id/edtImages"
+            android:hint="Images (URLs)"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"/>
+
+        <EditText android:id="@+id/edtAvailableTimes"
+            android:hint="Thời gian có sẵn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"/>
+
+
+        <Button android:id="@+id/btnAddField"
+            android:text="Thêm sân"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"/>
+    </LinearLayout>
+</ScrollView>

@@ -12,6 +12,10 @@ public interface UserDao {
     @Update void update(User user);
     @Delete void delete(User user);
     @Query("SELECT * FROM users") List<User> getAll();
+    @Query("SELECT * FROM users WHERE phone = :phone LIMIT 1")
+    User findByPhone(String phone);
+    @Query("SELECT * FROM users WHERE email = :email LIMIT 1")
+    User findByEmail(String email);
     @Query("SELECT * FROM users WHERE id = :id") User getById(int id);
     @Query("SELECT * FROM users WHERE phone = :phone AND passwordHash = :password LIMIT 1")
     User findByPhoneAndPassword(String phone, String password);

@@ -51,13 +51,8 @@
                 style="@style/EditTextStyle" />
 
             <EditText
-                android:id="@+id/edtBirthdate"
-                android:hint="Ngày tháng năm sinh"
-                style="@style/EditTextStyle" />
-
-            <EditText
-                android:id="@+id/edtGender"
-                android:hint="Giới tính"
+                android:id="@+id/edtEmail"
+                android:hint="Email"
                 style="@style/EditTextStyle" />
 
             <EditText

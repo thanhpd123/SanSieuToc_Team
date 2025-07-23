@@ -42,45 +42,32 @@ public class LoginActivity extends AppCompatActivity {
             String phone = edtPhone.getText().toString().trim();
             String password = edtPassword.getText().toString().trim();
 
-                if (TextUtils.isEmpty(phone) || TextUtils.isEmpty(password)) {
-                    Toast.makeText(LoginActivity.this, "Vui lòng điền đầy đủ thông tin", Toast.LENGTH_SHORT).show();
-                    return;
-                }
-                if (phone.equals("0363065589") && password.equals("1")) {
-                    Toast.makeText(LoginActivity.this, "Đăng nhập thành công (Admin)", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(LoginActivity.this, AdminManagementActivity.class);
-                    startActivity(intent);
-                    finish();
-                    return;
-                }
-                // Kiểm tra đăng nhập bằng Room DB (không hardcode nữa)
-                Executors.newSingleThreadExecutor().execute(() -> {
-                    User user = db.userDao().findByPhoneAndPassword(phone, password);
-                    runOnUiThread(() -> {
-                        if (user != null && !user.isBanned ) {
-                            Toast.makeText(LoginActivity.this, "Đăng nhập thành công", Toast.LENGTH_SHORT).show();
-                            Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
-                            intent.putExtra("user_id", user.id);  // Truyền userId sang HomeActivity
-                            startActivity(intent);
-                            finish();
-                        } else {
-                            Toast.makeText(LoginActivity.this, "Sai số điện thoại hoặc mật khẩu", Toast.LENGTH_SHORT).show();
-                        }
-                    });
-                });
+            if (TextUtils.isEmpty(phone) || TextUtils.isEmpty(password)) {
+                Toast.makeText(LoginActivity.this, "Vui lòng điền đầy đủ thông tin", Toast.LENGTH_SHORT).show();
+                return;
             }
 
-            // Login
+            // Đăng nhập admin (hardcoded)
+            if (phone.equals("0363065589") && password.equals("1")) {
+                Toast.makeText(LoginActivity.this, "Đăng nhập thành công (Admin)", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(LoginActivity.this, AdminManagementActivity.class);
+                startActivity(intent);
+                finish();
+                return;
+            }
+
+            // Kiểm tra đăng nhập bằng Room DB
             Executors.newSingleThreadExecutor().execute(() -> {
                 User user = db.userDao().findByPhoneAndPassword(phone, password);
+
                 runOnUiThread(() -> {
                     if (user != null) {
                         Toast.makeText(LoginActivity.this, "Đăng nhập thành công", Toast.LENGTH_SHORT).show();
 
-                        // ✅ Gán CurrentUser
+                        // Gán CurrentUser
                         CurrentUser.user = user;
 
-                        // ✅ Lưu role vào SharedPreferences (tuỳ mục đích sử dụng)
+                        // Lưu role vào SharedPreferences
                         getSharedPreferences("MyPrefs", MODE_PRIVATE)
                                 .edit()
                                 .putString("role", user.role)
@@ -97,6 +84,7 @@ public class LoginActivity extends AppCompatActivity {
             });
         });
 
+        // Sự kiện chuyển sang RegisterActivity
         tvRegisterNow.setOnClickListener(v -> {
             Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
             startActivity(intent);

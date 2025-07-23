@@ -21,7 +21,7 @@
             android:id="@+id/tvTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Thông báo (2)"
+            android:text="Thông báo "
             android:textColor="#FFFFFF"
             android:textSize="24sp"
             android:textStyle="bold" />
@@ -50,25 +50,6 @@
             android:background="#FFFFFF"
             android:padding="8dp">
 
-            <TextView
-                android:id="@+id/btnThongBao"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="match_parent"
-                android:text="Thông báo"
-                android:textColor="#000000"
-                android:background="@drawable/border_button"
-                android:gravity="center" />
-
-            <TextView
-                android:id="@+id/btnTinNhan"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="match_parent"
-                android:text="Tin nhắn"
-                android:textColor="#000000"
-                android:background="@drawable/border_button"
-                android:gravity="center" />
         </LinearLayout>
 
         <!-- Danh sách các thông báo -->
@@ -123,14 +104,6 @@
                         android:paddingEnd="8dp"
                         android:layout_marginTop="8dp"/>
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Thứ 7, 03/03/2025 - 11:13 CH"
-                        android:textColor="#777777"
-                        android:textSize="10sp"
-                        android:layout_marginTop="6dp"/>
-
                 </LinearLayout>
 
                 <!-- Mẫu 2: thông báo đặt thành công -->
@@ -170,13 +143,7 @@
                         android:paddingEnd="8dp"
                         android:layout_marginTop="8dp"/>
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Thứ 7, 03/03/2025 - 9:15 CH"
-                        android:textColor="#777777"
-                        android:textSize="10sp"
-                        android:layout_marginTop="6dp"/>
+
                 </LinearLayout>
 
             </LinearLayout>

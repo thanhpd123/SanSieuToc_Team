@@ -52,16 +52,6 @@
                 android:inputType="textPassword"
                 style="@style/EditTextStyle" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Quên mật khẩu?"
-                android:textColor="#006019"
-                android:textSize="14sp"
-                android:layout_gravity="end"
-                android:layout_marginTop="4dp"
-                android:layout_marginBottom="16dp" />
-
             <Button
                 android:id="@+id/btnLogin"
                 android:layout_width="match_parent"
@@ -80,14 +70,6 @@
                 android:text="Đăng nhập với tư cách chủ sân"
                 android:backgroundTint="#FFFFFF"
                 android:textColor="#006019"
-                android:layout_marginBottom="8dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="🔒 Đăng nhập bằng FaceID"
-                android:textSize="12sp"
-                android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp" />
 
         </LinearLayout>
@@ -115,14 +97,6 @@
                 android:clickable="true"
                 android:focusable="true" />
         </LinearLayout>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Hotline: 0987 654 321"
-            android:textColor="#FFFFFF"
-            android:textStyle="bold"
-            android:layout_marginBottom="16dp" />
 
     </LinearLayout>
 </ScrollView>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:background="@drawable/bg_card_white">
+
+    <TextView
+        android:id="@+id/tv_item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tên: "
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_item_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Phone: "
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_item_role"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Role: "
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_item_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Status: Active"
+        android:textSize="14sp"
+        android:textColor="#FF0000" />
+
+    <!-- Nút Ban/Unban -->
+    <Button
+        android:id="@+id/btn_ban_unban"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ban"
+        android:background="#FF0000"
+        android:textColor="#FFFFFF" />
+
+</LinearLayout>

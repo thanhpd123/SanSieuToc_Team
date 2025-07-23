@@ -15,4 +15,6 @@ public interface UserDao {
     @Query("SELECT * FROM users WHERE id = :id") User getById(int id);
     @Query("SELECT * FROM users WHERE phone = :phone AND passwordHash = :password LIMIT 1")
     User findByPhoneAndPassword(String phone, String password);
+    @Query("UPDATE users SET isBanned = :isBanned WHERE id = :userId")
+    void updateBanStatus(int userId, boolean isBanned);
 }

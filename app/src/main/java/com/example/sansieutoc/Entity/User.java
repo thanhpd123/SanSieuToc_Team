@@ -17,4 +17,5 @@ public class User {
     public String address;
     public String createdAt;
     public String updatedAt;
+    public boolean isBanned = false;
 }

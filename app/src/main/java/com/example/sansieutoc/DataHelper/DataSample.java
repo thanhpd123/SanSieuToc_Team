@@ -38,6 +38,7 @@ public class DataSample {
             user.address = "Khối 2 thị trấn Con Cuông";
             user.createdAt = "2025-06-17T12:17:37.548Z";
             user.updatedAt = "2025-06-17T12:17:37.548Z";
+            user.isBanned = false;
             db.userDao().insert(user);
 
             // Field

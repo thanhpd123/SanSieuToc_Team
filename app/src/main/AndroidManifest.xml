@@ -12,7 +12,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SanSieuToc"
         tools:targetApi="31">
+        <activity
+            android:name=".AdminManagementActivity"
+            android:exported="true">
 
+        </activity>
         <activity
             android:name=".SplashActivity"
             android:exported="true">

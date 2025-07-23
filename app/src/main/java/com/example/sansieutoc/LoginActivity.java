@@ -48,12 +48,18 @@ public class LoginActivity extends AppCompatActivity {
                     Toast.makeText(LoginActivity.this, "Vui lòng điền đầy đủ thông tin", Toast.LENGTH_SHORT).show();
                     return;
                 }
-
+                if (phone.equals("0363065589") && password.equals("1")) {
+                    Toast.makeText(LoginActivity.this, "Đăng nhập thành công (Admin)", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(LoginActivity.this, AdminManagementActivity.class);
+                    startActivity(intent);
+                    finish();
+                    return;
+                }
                 // Kiểm tra đăng nhập bằng Room DB (không hardcode nữa)
                 Executors.newSingleThreadExecutor().execute(() -> {
                     User user = db.userDao().findByPhoneAndPassword(phone, password);
                     runOnUiThread(() -> {
-                        if (user != null) {
+                        if (user != null && !user.isBanned ) {
                             Toast.makeText(LoginActivity.this, "Đăng nhập thành công", Toast.LENGTH_SHORT).show();
                             Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
                             intent.putExtra("user_id", user.id);  // Truyền userId sang HomeActivity

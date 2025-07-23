@@ -9,7 +9,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.sansieutoc.DataHelper.AppDatabase;
 import com.example.sansieutoc.DataHelper.DataSample;
+import com.example.sansieutoc.Entity.Field;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+
+import java.util.List;
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -70,5 +73,44 @@ public class HomeActivity extends AppCompatActivity {
             return false;
         });
 
+        findViewById(R.id.rdnyndtuy0u9).setOnClickListener(v -> {
+            Intent intent = new Intent(this, StadiumDetailActivity.class);
+            intent.putExtra("name", "Sân Cầu Lông Kim Bông");
+            intent.putExtra("time", "08:00 - 22:00");
+            intent.putExtra("price", "50,000đ/giờ");
+            intent.putExtra("address", "Xã Tân Xã, Huyện Thạch Thất, Hà Nội");
+            intent.putExtra("imageRes", R.drawable.san_kim_bong);
+            startActivity(intent);
+        });
+
+        findViewById(R.id.reol4m9a1gnc).setOnClickListener(v -> {
+            Intent intent = new Intent(this, StadiumDetailActivity.class);
+            intent.putExtra("name", "Sân cỏ nhân tạo Đại Dương");
+            intent.putExtra("time", "05:00 - 22:00");
+            intent.putExtra("price", "550,000đ/giờ");
+            intent.putExtra("address", "Cổng làng thôn 2, Xã Tân Xã, Thạch Thất, Hà Nội");
+            intent.putExtra("imageRes", R.drawable.san_dai_duong);
+            startActivity(intent);
+        });
+
+        findViewById(R.id.rndgfcvknhb).setOnClickListener(v -> {
+            Intent intent = new Intent(this, StadiumDetailActivity.class);
+            intent.putExtra("name", "Sân bóng Đại học FPT Hà Nội");
+            intent.putExtra("time", "05:00 - 22:00");
+            intent.putExtra("price", "500,000đ/giờ");
+            intent.putExtra("address", "Thạch Hoà, Thạch Thất, Hà Nội");
+            intent.putExtra("imageRes", R.drawable.san_fpt);
+            startActivity(intent);
+        });
+
+        findViewById(R.id.rvs8di1y63yg).setOnClickListener(v -> {
+            Intent intent = new Intent(this, StadiumDetailActivity.class);
+            intent.putExtra("name", "Sân bóng rổ đại học Quốc gia Hoà Lạc");
+            intent.putExtra("time", "08:00 - 22:00");
+            intent.putExtra("price", "300,000đ/giờ");
+            intent.putExtra("address", "Thạch Hoà, Thạch Thất, Hà Nội");
+            intent.putExtra("imageRes", R.drawable.san_bong_ro_quoc_gia);
+            startActivity(intent);
+        });
     }
 }
